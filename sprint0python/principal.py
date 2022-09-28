@@ -1,5 +1,8 @@
-from fibonacci import funcion_fibonacci	
+from fibonacci import funcion_fibonacci
 
-numero = input('\nTeclea un número: ')
+numero = int (input('Teclea un número: '))
 
-	print(funcion_fibonacci)
+print(funcion_fibonacci (numero))
+
+	
+
