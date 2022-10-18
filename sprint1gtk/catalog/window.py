@@ -4,11 +4,6 @@ from gi.repository import Gtk, GdkPixbuf
 from cell import Cell
 
 class MainWindow(Gtk.Window):
-	image1 = Gtk.Image()
-	image2 = Gtk.Image()
-	image3 = Gtk.Image()
-	image4 = Gtk.Image()
-	image5 = Gtk.Image()
 	
 	def __init__(self):
 		super().__init__(title="Catálogo")
@@ -22,6 +17,12 @@ class MainWindow(Gtk.Window):
 		header.props.show_close_button = True
 		
 		self.set_titlebar(header)
+		
+		image1 = Gtk.Image()
+		image2 = Gtk.Image()
+		image3 = Gtk.Image()
+		image4 = Gtk.Image()
+		image5 = Gtk.Image()
 		
 		scrolled = Gtk.ScrolledWindow()
 		scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
