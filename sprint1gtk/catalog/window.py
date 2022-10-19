@@ -27,23 +27,23 @@ class MainWindow(Gtk.Window):
 
 		#Añadir imágenes
 		image = Gtk.Image()
-		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("data/unedited/Imagen1.jpg", 200, 200, False)
+		pixbuf = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:/msys64/home/Toshiba/desarrollo-de-interfaces/sprint1gtk/catalog/data/unedited/Imagen1.jpg", 200, 200, False)
 		image.set_from_pixbuf(pixbuf)
 		
 		image2 = Gtk.Image()
-		pixbuf2 = GdkPixbuf.Pixbuf.new_from_file_at_scale("data/unedited/Imagen2.jpg", 200, 200, False)
+		pixbuf2 = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:/msys64/home/Toshiba/desarrollo-de-interfaces/sprint1gtk/catalog/data/unedited/Imagen2.jpg", 200, 200, False)
 		image2.set_from_pixbuf(pixbuf2)
 		
 		image3 = Gtk.Image()
-		pixbuf3 = GdkPixbuf.Pixbuf.new_from_file_at_scale("data/unedited/Imagen3.jpg", 200, 200, False)
+		pixbuf3 = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:/msys64/home/Toshiba/desarrollo-de-interfaces/sprint1gtk/catalog/data/unedited/Imagen3.jpg", 200, 200, False)
 		image3.set_from_pixbuf(pixbuf3)
 		
 		image4 = Gtk.Image()		
-		pixbuf4 = GdkPixbuf.Pixbuf.new_from_file_at_scale("data/unedited/Imagen4.jpg", 200, 200, False)
+		pixbuf4 = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:/msys64/home/Toshiba/desarrollo-de-interfaces/sprint1gtk/catalog/data/unedited/Imagen4.jpg", 200, 200, False)
 		image4.set_from_pixbuf(pixbuf4)
 		
 		image5 = Gtk.Image()
-		pixbuf5 = GdkPixbuf.Pixbuf.new_from_file_at_scale("data/unedited/Imagen5.jpg", 200, 200, False)
+		pixbuf5 = GdkPixbuf.Pixbuf.new_from_file_at_scale("C:/msys64/home/Toshiba/desarrollo-de-interfaces/sprint1gtk/catalog/data/unedited/Imagen5.jpg", 200, 200, False)
 		image5.set_from_pixbuf(pixbuf5)
 		
 		cell_one = Cell("Mapaches", image)
