@@ -7,4 +7,21 @@
   {
     "name": "Ardilla",
     "description": "Las ardillas comen bellotas",
-    "image_url": 
+    "image_url": "https://raw.githubusercontent.com/CeciaVarela/desarrollo-de-interfaces/main/API-REST/Imagen2.jpg"
+  },
+  {
+    "name": "Mariquita",
+    "description": "Las mariquitas tienen puntitos",
+    "image_url": "https://raw.githubusercontent.com/CeciaVarela/desarrollo-de-interfaces/main/API-REST/Imagen3.jpg"
+  },
+  {
+    "name": "Perro",
+    "description": "Los perros son muy cariñosos",
+    "image_url": "https://raw.githubusercontent.com/CeciaVarela/desarrollo-de-interfaces/main/API-REST/Imagen4.jpg"
+  },
+  {
+    "name": "Hamster",
+    "description": "Los hamsters tienen la cara gordita",
+    "image_url": "https://raw.githubusercontent.com/CeciaVarela/desarrollo-de-interfaces/main/API-REST/Imagen5.jpg"
+  }
+ ]
