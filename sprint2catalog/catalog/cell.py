@@ -18,7 +18,8 @@ class Cell(Gtk.EventBox):
 	def on_click(self, widget, event):
 		label = Gtk.Label()
 		label2 = Gtk.Label()
-		imagen = Gtk.Image().set_from_pixbuf(self.image.get_pixbuf())
+		imagen = Gtk.Image()
+		imagen.set_from_pixbuf(self.image.get_pixbuf())
 		
 		
 		if self.name == "Mapaches":			
