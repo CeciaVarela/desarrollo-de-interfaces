@@ -9,8 +9,9 @@ class MainWindow(Gtk.Window):
 	def __init__(self, data_source):
 		super().__init__(title="Catálogo")
 		self.connect("destroy", Gtk.main_quit)
+		self.set_position(Gtk.WindowPosition.CENTER)
 		self.set_border_width(15)
-		self.set_default_size(400, 400)
+		self.set_default_size(700, 600)
 		
 		#Definir el título de la página
 		header = Gtk.HeaderBar(title="Animales")

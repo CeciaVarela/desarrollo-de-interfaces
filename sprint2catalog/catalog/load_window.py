@@ -12,7 +12,9 @@ class LoadWindow(Gtk.Window):
     def __init__(self):
         super().__init__(title="")
         self.connect("destroy", Gtk.main_quit)
+        self.set_position(Gtk.WindowPosition.CENTER)
         self.set_border_width(60)
+        self.set_default_size(200, 200)
         self.set_resizable(False)
         self.spinner.props.active = True
 
