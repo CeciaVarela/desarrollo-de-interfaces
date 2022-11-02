@@ -24,22 +24,27 @@ class Cell(Gtk.EventBox):
 		if self.name == "Mapaches":			
 			label.set_text(self.name)
 			label2.set_text("Son unos animales muy bonitos")
+			imagen = Gtk.Image().set_from_pixbuf(self.image1.get_pixbuf())
 			
 		elif self.name == "Ardilla":
 			label.set_text(self.name)
 			label2.set_text("Las ardillas comen bellotas")
+			imagen = Gtk.Image().set_from_pixbuf(self.image2.get_pixbuf())
 			
 		elif self.name == "Mariquita":
 			label.set_text(self.name)
 			label2.set_text("Las mariquitas tienen puntitos")
+			imagen = Gtk.Image().set_from_pixbuf(self.image3.get_pixbuf())
 			
 		elif self.name == "Perro":
 			label.set_text(self.name)
 			label2.set_text("Los perros son muy cariñosos")
+			imagen = Gtk.Image().set_from_pixbuf(self.image4.get_pixbuf())
 			
 		elif self.name == "Hamster":
 			label.set_text(self.name)
 			label2.set_text("Los hamsters tienen la cara gordita")
+			imagen = Gtk.Image().set_from_pixbuf(self.image5.get_pixbuf())
 			
 		
 

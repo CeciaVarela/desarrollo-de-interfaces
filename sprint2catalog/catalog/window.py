@@ -19,7 +19,8 @@ class MainWindow(Gtk.Window):
 		header.props.show_close_button = True
 		
 		self.set_titlebar(header)
-		
+
+		#Permitir el movimiento horizontal o vertical	
 		scrolled = Gtk.ScrolledWindow()
 		scrolled.set_policy(Gtk.PolicyType.NEVER, Gtk.PolicyType.AUTOMATIC)
 		scrolled.add(self.flowbox)
@@ -30,4 +31,29 @@ class MainWindow(Gtk.Window):
 			cell = Cell(item.get("name"), item.get("gtk_image"))
 			self.flowbox.add(cell)
 
+			mb = Gtk.MenuBar()
+		
+			filemenu = Gtk.Menu()
+			filem = Gtk.MenuItem("Ayuda")
+			filem.set_submenu(filemenu)
+		
+			label = Gtk.Label()
+		
+			mb.append(filem)
 
+			#Creación del submenu
+			imenu = Gtk.Menu()
+		
+			importm = Gtk.MenuItem("Acerca de")
+			importm.set_submenu(imenu)
+		
+			label.set_text("El desarrollador es una persona")
+			inews = Gtk.MenuItem("Acerca del desarrollador", label)
+			imenu.append(inews)
+		
+			filemenu.append(importm)
+		
+			vbox = Gtk.VBox(False, 2)
+			vbox.pack_start(mb, False, False, 0)
+			self.add(vbox)
+	
