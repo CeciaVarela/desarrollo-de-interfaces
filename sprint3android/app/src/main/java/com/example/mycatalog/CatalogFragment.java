@@ -8,6 +8,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.material.navigation.NavigationView;
+
 
 public class CatalogFragment extends Fragment {
 
@@ -17,15 +19,9 @@ public class CatalogFragment extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        AppBarConfiguration appBarConfiguration =
-                new AppBarConfiguration.Builder(navController.getGraph())
-                        .setDrawerLayout(drawerLayout)
-                        .build();
+        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).setDrawerLayout(drawerLayout).build();
 
-        NavHostFragment navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment);
-        NavController navController = navHostFragment.getNavController();
-        NavigationView navView = findViewById(R.id.nav_view);
-        NavigationUI.setupWithNavController(navView, navController);
+
         }
 
 
