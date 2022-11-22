@@ -20,6 +20,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,18 +33,30 @@ public class MainActivity extends AppCompatActivity {
         Activity activity = this;
         JsonArrayRequest request = new JsonArrayRequest(
                 Request.Method.GET,
-                "https://github.com/CeciaVarela/desarrollo-de-interfaces/blob/main/API-REST/catalog.json",
+                "https://raw.githubusercontent.com/CeciaVarela/desarrollo-de-interfaces/main/API-REST/catalog.json",
                 null,
                 new Response.Listener<JSONArray>(){
                     @Override
                     public void onResponse(JSONArray response) {
-
+                        List<AnimalData> allTheAnimals = new ArrayList<>();
+                        for (int i = 0; i < response.length(); i++) {
+                            try {
+                                JSONObject animal = response.getJSONObject(i);
+                                AnimalData data = new AnimalData(animal);
+                                allTheAnimals.add(data);
+                            } catch (JSONException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                        AnimalRecyclerViewAdapter adapter = new AnimalRecyclerViewAdapter(allTheAnimals, activity);
+                        recyclerView.setAdapter(adapter);
+                        recyclerView.setLayoutManager(new LinearLayoutManager(activity));
                     }
                 },
                 new Response.ErrorListener(){
                     @Override
                     public void onErrorResponse(VolleyError error){
-                        
+                        Toast.makeText(activity,"Error", Toast.LENGTH_LONG).show();
                     }
                 });
         RequestQueue cola = Volley.newRequestQueue(this);
